@@ -8,8 +8,6 @@ using lab2.Models;
     public class BookController : Controller
     {
         // GET: Book
-        [HttpPost,ActionName("CreateBook")]
-        [ValidateAntiForgeryToken]
     public ActionResult Index()
         {
             return View();
@@ -73,6 +71,8 @@ using lab2.Models;
     {
         return View();
     }
+    [HttpPost, ActionName("CreateBook")]
+    [ValidateAntiForgeryToken]
     public ActionResult Contact ([Bind(Include ="ID,Title,Author,Cover")]Book book)
     {
         var books = new List<Book>();

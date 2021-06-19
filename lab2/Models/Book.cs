@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-
 namespace lab2.Models
 {
     public class Book
@@ -28,8 +27,8 @@ namespace lab2.Models
             get { return id; }
             set { id = value; }
         }
-        [Required(ErrorMessage="Tieu De Ko Dc Trong")]
-        [StringLength(250,ErrorMessage ="Tieu De ko dc vuot qua 250")]
+        [Required(ErrorMessage ="Tieu De Ko Dc Trong")]
+        [StringLength(250,ErrorMessage = "Tieu De ko dc vuot qua 250")]
         [Display(Name ="Tieu De")]
         public string Title
         {
